@@ -1,0 +1,1379 @@
+{
+    "took": 4230,
+    "timed_out": false,
+    "_shards": {
+        "total": 13,
+        "successful": 13,
+        "skipped": 5,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 10000,
+            "relation": "gte"
+        },
+        "max_score": null,
+        "hits": [
+            {
+                "_index": ".ds-traces-apm-default-2025.01.01-001717",
+                "_id": "iAVPJJQBIfjCflSH4Xjk",
+                "_score": null,
+                "_source": {
+                    "container": {
+                        "id": "4046efd2326cc2aafc2018a553b583bb38f23a4bdc5f9ee306bc8e183528be3b"
+                    },
+                    "agent": {
+                        "name": "opentelemetry/java",
+                        "version": "1.23.1"
+                    },
+                    "process": {
+                        "pid": 1,
+                        "executable": "/usr/local/openjdk-8/jre/bin/java"
+                    },
+                    "data_stream.namespace": "default",
+                    "source": {
+                        "port": 27017,
+                        "domain": "172.21.5.123"
+                    },
+                    "processor": {
+                        "name": "transaction",
+                        "event": "transaction"
+                    },
+                    "data_stream.type": "traces",
+                    "labels": {
+                        "process_runtime_description": "Oracle Corporation OpenJDK 64-Bit Server VM 25.342-b07",
+                        "db_connection_string": "mongodb://172.21.5.123:27017",
+                        "db_name": "dummydb",
+                        "thread_name": "thread_common-scheduled {pool:common-scheduled, thread:85}",
+                        "db_statement": "{\"ping\": \"?\", \"$db\": \"?\", \"$clusterTime\": {\"clusterTime\": \"?\", \"signature\": {\"hash\": \"?\", \"keyId\": \"?\"}}, \"lsid\": {\"id\": \"?\"}}",
+                        "db_operation": "ping",
+                        "db_system": "mongodb",
+                        "telemetry_auto_version": "1.23.0"
+                    },
+                    "tags": [
+                        "_geoip_database_unavailable_GeoLite2-City.mmdb"
+                    ],
+                    "observer": {
+                        "hostname": "3293a7339d4a",
+                        "id": "d1ce9f4c-f562-4869-bfd2-78fa1e2c3db2",
+                        "type": "apm-server",
+                        "ephemeral_id": "c934efaf-d6d7-4ecb-8259-41303070140b",
+                        "version": "8.5.0"
+                    },
+                    "trace": {
+                        "id": "a477790a6170ef981b6417202e952f05"
+                    },
+                    "@timestamp": "2025-01-02T00:00:00.092Z",
+                    "ecs": {
+                        "version": "1.12.0"
+                    },
+                    "service": {
+                        "node": {
+                            "name": "4046efd2326cc2aafc2018a553b583bb38f23a4bdc5f9ee306bc8e183528be3b"
+                        },
+                        "environment": "HOA-LAC-K8S",
+                        "framework": {
+                            "name": "io.opentelemetry.mongo-3.1",
+                            "version": "1.23.0-alpha"
+                        },
+                        "name": "iva-cam-stream-hl-ivaapp14",
+                        "runtime": {
+                            "name": "OpenJDK Runtime Environment",
+                            "version": "1.8.0_342-b07"
+                        },
+                        "language": {
+                            "name": "java"
+                        }
+                    },
+                    "numeric_labels": {
+                        "thread_id": 248
+                    },
+                    "data_stream.dataset": "apm",
+                    "host": {
+                        "hostname": "ivaapp14",
+                        "os": {
+                            "type": "linux",
+                            "platform": "linux",
+                            "full": "Linux 5.4.0-202-generic"
+                        },
+                        "name": "ivaapp14",
+                        "architecture": "amd64"
+                    },
+                    "client": {
+                        "port": 27017,
+                        "domain": "172.21.5.123"
+                    },
+                    "event": {
+                        "agent_id_status": "missing",
+                        "ingested": "2025-01-02T00:00:02Z",
+                        "outcome": "unknown"
+                    },
+                    "transaction": {
+                        "duration": {
+                            "us": 624
+                        },
+                        "name": "ping dummydb",
+                        "id": "58265d8827bec8c9",
+                        "type": "unknown",
+                        "sampled": true
+                    },
+                    "timestamp": {
+                        "us": 1735776000092000
+                    }
+                },
+                "sort": [
+                    1735776000092
+                ]
+            },
+            {
+                "_index": ".ds-traces-apm-default-2025.01.01-001717",
+                "_id": "fAVPJJQBIfjCflSH5Xnh",
+                "_score": null,
+                "_source": {
+                    "process": {
+                        "pid": 2360,
+                        "command_line": "/usr/lib/jvm/jdk1.8.0_291/jre/bin/java -Dappname=iva-cam-stream -Xms512m -Xmx6G -Dspring.profiles.active=pro-hl -Dlog4j.configurationFile=log4j2-pro-hl.properties -Dvertx.hazelcast.config=classpath:vertx-cluster-hl.xml -Dhazelcast.group.name=hazelcast-ivahl -Dhazelcast.group.password=IVAHL!@#$ -Dmongo.db.username=ivacamadmin -Dmongo.db.password=ViettelRD!@#$ -Dedge.gwAccessKey=8c53d26e986bda3ebbb79c545b6d7a05 -Dedge.gwSecretKey=897864dddc5f7b1c993c7941b0dec861 -Dedge.root.username=admin -Djava.util.concurrent.ForkJoinPool.common.parallelism=32 -Dserver.port.httprest=8001 -Dserver.port.rtsp=5081 -Dserver.port.edge=5071 -Dserver.port.devicecam=5101 -Dserver.port.control=5091 -Dserver.address=172.21.5.163 -Dudp.bootstrap.video.local.port.min=20000 -Dudp.bootstrap.video.local.port.max=45000 -Dudp.bootstrap.audio.local.port.min=20000 -Dudp.bootstrap.audio.local.port.max=45000 -Dserver.ext.address=116.101.122.181 -Dserver.ext.port.rtsp=5081 -Dstream.server.feature.webstream=false -javaagent:/app/iva-cam-stream/open",
+                        "executable": "/usr/lib/jvm/jdk1.8.0_291/jre/bin/java"
+                    },
+                    "agent": {
+                        "name": "opentelemetry/java",
+                        "version": "1.23.1"
+                    },
+                    "data_stream.namespace": "default",
+                    "source": {
+                        "port": 27017,
+                        "domain": "192.168.20.154"
+                    },
+                    "processor": {
+                        "name": "transaction",
+                        "event": "transaction"
+                    },
+                    "data_stream.type": "traces",
+                    "labels": {
+                        "process_runtime_description": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.291-b10",
+                        "db_connection_string": "mongodb://192.168.20.154:27017",
+                        "db_name": "dummydb",
+                        "thread_name": "thread_common-scheduled {pool:common-scheduled, thread:5}",
+                        "db_statement": "{\"ping\": \"?\", \"$db\": \"?\", \"$clusterTime\": {\"clusterTime\": \"?\", \"signature\": {\"hash\": \"?\", \"keyId\": \"?\"}}, \"lsid\": {\"id\": \"?\"}}",
+                        "db_system": "mongodb",
+                        "db_operation": "ping",
+                        "telemetry_auto_version": "1.23.0"
+                    },
+                    "tags": [
+                        "_geoip_database_unavailable_GeoLite2-City.mmdb"
+                    ],
+                    "observer": {
+                        "hostname": "3293a7339d4a",
+                        "id": "d1ce9f4c-f562-4869-bfd2-78fa1e2c3db2",
+                        "type": "apm-server",
+                        "ephemeral_id": "c934efaf-d6d7-4ecb-8259-41303070140b",
+                        "version": "8.5.0"
+                    },
+                    "trace": {
+                        "id": "a1fb82c974d42476a43e5ef236fc7479"
+                    },
+                    "@timestamp": "2025-01-02T00:00:01.219Z",
+                    "ecs": {
+                        "version": "1.12.0"
+                    },
+                    "service": {
+                        "node": {
+                            "name": "ivaapp06"
+                        },
+                        "environment": "hoa-lac",
+                        "framework": {
+                            "name": "io.opentelemetry.mongo-3.1",
+                            "version": "1.23.0-alpha"
+                        },
+                        "name": "iva-cam-stream-hl-opentele-ivaapp06",
+                        "runtime": {
+                            "name": "Java(TM) SE Runtime Environment",
+                            "version": "1.8.0_291-b10"
+                        },
+                        "language": {
+                            "name": "java"
+                        }
+                    },
+                    "numeric_labels": {
+                        "thread_id": 188
+                    },
+                    "data_stream.dataset": "apm",
+                    "host": {
+                        "hostname": "ivaapp06",
+                        "os": {
+                            "type": "linux",
+                            "platform": "linux",
+                            "full": "Linux 5.4.0-204-generic"
+                        },
+                        "name": "ivaapp06",
+                        "architecture": "amd64"
+                    },
+                    "client": {
+                        "port": 27017,
+                        "domain": "192.168.20.154"
+                    },
+                    "event": {
+                        "agent_id_status": "missing",
+                        "ingested": "2025-01-02T00:00:03Z",
+                        "outcome": "unknown"
+                    },
+                    "transaction": {
+                        "duration": {
+                            "us": 499
+                        },
+                        "name": "ping dummydb",
+                        "id": "8f5f76a935871345",
+                        "type": "unknown",
+                        "sampled": true
+                    },
+                    "timestamp": {
+                        "us": 1735776001219000
+                    }
+                },
+                "sort": [
+                    1735776001219
+                ]
+            },
+            {
+                "_index": ".ds-traces-apm-default-2025.01.01-001717",
+                "_id": "9wVPJJQBIfjCflSH6npi",
+                "_score": null,
+                "_source": {
+                    "container": {
+                        "id": "086a6b33777423a2b7652ec107c8df6f44810ccf2f9dd91132667278192c0e7f"
+                    },
+                    "agent": {
+                        "name": "opentelemetry/java",
+                        "version": "1.44.1"
+                    },
+                    "process": {
+                        "pid": 1,
+                        "executable": "/opt/java/openjdk/bin/java"
+                    },
+                    "data_stream.namespace": "default",
+                    "data_stream.type": "traces",
+                    "processor": {
+                        "name": "transaction",
+                        "event": "transaction"
+                    },
+                    "labels": {
+                        "http_route": "/actuator/health/**",
+                        "network_protocol_version": "1.1",
+                        "http_request_method": "GET",
+                        "server_address": "localhost",
+                        "network_peer_address": "0:0:0:0:0:0:0:1",
+                        "url_scheme": "http",
+                        "process_runtime_description": "Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.5+11-LTS",
+                        "thread_name": "http-nio-8068-exec-7",
+                        "user_agent_original": "curl/8.5.0",
+                        "client_address": "0:0:0:0:0:0:0:1",
+                        "telemetry_distro_name": "opentelemetry-java-instrumentation",
+                        "telemetry_distro_version": "2.10.0",
+                        "url_path": "/actuator/health/readiness"
+                    },
+                    "tags": [
+                        "_geoip_database_unavailable_GeoLite2-City.mmdb"
+                    ],
+                    "observer": {
+                        "hostname": "3293a7339d4a",
+                        "id": "d1ce9f4c-f562-4869-bfd2-78fa1e2c3db2",
+                        "type": "apm-server",
+                        "ephemeral_id": "c934efaf-d6d7-4ecb-8259-41303070140b",
+                        "version": "8.5.0"
+                    },
+                    "trace": {
+                        "id": "091afdca9e7053c29a8db09ce1278835"
+                    },
+                    "@timestamp": "2025-01-02T00:00:01.290Z",
+                    "ecs": {
+                        "version": "1.12.0"
+                    },
+                    "service": {
+                        "node": {
+                            "name": "253c4f70-3438-4f22-9a7c-e5db60f85f4d"
+                        },
+                        "environment": "HOA-LAC-K8S",
+                        "framework": {
+                            "name": "io.opentelemetry.tomcat-10.0",
+                            "version": "2.10.0-alpha"
+                        },
+                        "name": "camIPC-mcs-signaling",
+                        "runtime": {
+                            "name": "OpenJDK Runtime Environment",
+                            "version": "21.0.5+11-LTS"
+                        },
+                        "language": {
+                            "name": "java"
+                        }
+                    },
+                    "numeric_labels": {
+                        "thread_id": 113,
+                        "http_response_status_code": 200,
+                        "server_port": 8068,
+                        "network_peer_port": 47832
+                    },
+                    "data_stream.dataset": "apm",
+                    "host": {
+                        "hostname": "ivaapp10",
+                        "os": {
+                            "type": "linux",
+                            "platform": "linux",
+                            "full": "Linux 5.4.0-204-generic"
+                        },
+                        "name": "ivaapp10",
+                        "architecture": "amd64"
+                    },
+                    "event": {
+                        "agent_id_status": "missing",
+                        "ingested": "2025-01-02T00:00:04Z",
+                        "outcome": "unknown"
+                    },
+                    "transaction": {
+                        "duration": {
+                            "us": 1173
+                        },
+                        "name": "GET /actuator/health/**",
+                        "id": "60f07b92ca4f9622",
+                        "type": "unknown",
+                        "sampled": true
+                    },
+                    "timestamp": {
+                        "us": 1735776001290169
+                    }
+                },
+                "sort": [
+                    1735776001290
+                ]
+            },
+            {
+                "_index": ".ds-traces-apm-default-2025.01.01-001717",
+                "_id": "-AVPJJQBIfjCflSH6npi",
+                "_score": null,
+                "_source": {
+                    "container": {
+                        "id": "086a6b33777423a2b7652ec107c8df6f44810ccf2f9dd91132667278192c0e7f"
+                    },
+                    "process": {
+                        "pid": 1,
+                        "executable": "/opt/java/openjdk/bin/java"
+                    },
+                    "agent": {
+                        "name": "opentelemetry/java",
+                        "version": "1.44.1"
+                    },
+                    "data_stream.namespace": "default",
+                    "data_stream.type": "traces",
+                    "processor": {
+                        "name": "transaction",
+                        "event": "transaction"
+                    },
+                    "labels": {
+                        "http_route": "/actuator/health/**",
+                        "network_protocol_version": "1.1",
+                        "http_request_method": "GET",
+                        "server_address": "localhost",
+                        "network_peer_address": "0:0:0:0:0:0:0:1",
+                        "url_scheme": "http",
+                        "process_runtime_description": "Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.5+11-LTS",
+                        "thread_name": "http-nio-8068-exec-1",
+                        "user_agent_original": "curl/8.5.0",
+                        "client_address": "0:0:0:0:0:0:0:1",
+                        "telemetry_distro_name": "opentelemetry-java-instrumentation",
+                        "telemetry_distro_version": "2.10.0",
+                        "url_path": "/actuator/health/readiness"
+                    },
+                    "tags": [
+                        "_geoip_database_unavailable_GeoLite2-City.mmdb"
+                    ],
+                    "observer": {
+                        "hostname": "3293a7339d4a",
+                        "id": "d1ce9f4c-f562-4869-bfd2-78fa1e2c3db2",
+                        "ephemeral_id": "c934efaf-d6d7-4ecb-8259-41303070140b",
+                        "type": "apm-server",
+                        "version": "8.5.0"
+                    },
+                    "trace": {
+                        "id": "3439cefc75d49ecc694b21de15b86f3b"
+                    },
+                    "@timestamp": "2025-01-02T00:00:01.290Z",
+                    "ecs": {
+                        "version": "1.12.0"
+                    },
+                    "service": {
+                        "node": {
+                            "name": "253c4f70-3438-4f22-9a7c-e5db60f85f4d"
+                        },
+                        "environment": "HOA-LAC-K8S",
+                        "framework": {
+                            "name": "io.opentelemetry.tomcat-10.0",
+                            "version": "2.10.0-alpha"
+                        },
+                        "name": "camIPC-mcs-signaling",
+                        "runtime": {
+                            "name": "OpenJDK Runtime Environment",
+                            "version": "21.0.5+11-LTS"
+                        },
+                        "language": {
+                            "name": "java"
+                        }
+                    },
+                    "numeric_labels": {
+                        "thread_id": 107,
+                        "http_response_status_code": 200,
+                        "server_port": 8068,
+                        "network_peer_port": 47836
+                    },
+                    "data_stream.dataset": "apm",
+                    "host": {
+                        "hostname": "ivaapp10",
+                        "os": {
+                            "type": "linux",
+                            "platform": "linux",
+                            "full": "Linux 5.4.0-204-generic"
+                        },
+                        "name": "ivaapp10",
+                        "architecture": "amd64"
+                    },
+                    "event": {
+                        "agent_id_status": "missing",
+                        "ingested": "2025-01-02T00:00:04Z",
+                        "outcome": "unknown"
+                    },
+                    "transaction": {
+                        "duration": {
+                            "us": 1150
+                        },
+                        "name": "GET /actuator/health/**",
+                        "id": "6860c709b6154d77",
+                        "type": "unknown",
+                        "sampled": true
+                    },
+                    "timestamp": {
+                        "us": 1735776001290209
+                    }
+                },
+                "sort": [
+                    1735776001290
+                ]
+            },
+            {
+                "_index": ".ds-traces-apm-default-2025.01.01-001717",
+                "_id": "-QVPJJQBIfjCflSH6npi",
+                "_score": null,
+                "_source": {
+                    "process": {
+                        "pid": 2358,
+                        "command_line": "/usr/lib/jvm/jdk1.8.0_291/jre/bin/java -javaagent:/app/ivahome/opentelemetry-javaagent-v1.23.0.jar -Dotel.service.name=ivahome-hl-ivaapp06 -Dotel.javaagent.debug=true -Dotel.traces.exporter=otlp -Dotel.metrics.exporter=otlp -Dotel.logs.exporter=otlp -Dotel.exporter.otlp.endpoint=http://otlp.viettel.local -Duser.dir=/app/ivahome/ivahome-1.0-SNAPSHOT -Xms2G -Xmx6G -Dconfig.file=/app/ivahome/secret-conf/application-pro-hl-secret.conf -Dlogger.resource=logback-pro-hl.xml -Dvertx.hazelcast.config=classpath:cluster-hl.xml -Dhttp.port=9008 -Dkms.server.address=ws://172.21.5.150:8888/kurento -Ds3.endpoint=ivacdn.viettel.io",
+                        "executable": "/usr/lib/jvm/jdk1.8.0_291/jre/bin/java"
+                    },
+                    "agent": {
+                        "name": "opentelemetry/java",
+                        "version": "1.23.1"
+                    },
+                    "data_stream.namespace": "default",
+                    "data_stream.type": "traces",
+                    "processor": {
+                        "name": "transaction",
+                        "event": "transaction"
+                    },
+                    "url": {
+                        "path": "/nginx_status",
+                        "original": "/nginx_status",
+                        "scheme": "http",
+                        "domain": "127.0.0.1",
+                        "full": "http://127.0.0.1/nginx_status"
+                    },
+                    "labels": {
+                        "process_runtime_description": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.291-b10",
+                        "thread_name": "application-akka.actor.default-dispatcher-144412",
+                        "telemetry_auto_version": "1.23.0"
+                    },
+                    "tags": [
+                        "_geoip_database_unavailable_GeoLite2-City.mmdb"
+                    ],
+                    "observer": {
+                        "hostname": "3293a7339d4a",
+                        "id": "d1ce9f4c-f562-4869-bfd2-78fa1e2c3db2",
+                        "ephemeral_id": "c934efaf-d6d7-4ecb-8259-41303070140b",
+                        "type": "apm-server",
+                        "version": "8.5.0"
+                    },
+                    "trace": {
+                        "id": "29227dba55c0824938de161685645ef8"
+                    },
+                    "@timestamp": "2025-01-02T00:00:02.004Z",
+                    "ecs": {
+                        "version": "1.12.0"
+                    },
+                    "service": {
+                        "node": {
+                            "name": "ivaapp06"
+                        },
+                        "environment": "hoa-lac",
+                        "framework": {
+                            "name": "io.opentelemetry.akka-http-10.0",
+                            "version": "1.23.0-alpha"
+                        },
+                        "name": "ivahome-hl-ivaapp06",
+                        "runtime": {
+                            "name": "Java(TM) SE Runtime Environment",
+                            "version": "1.8.0_291-b10"
+                        },
+                        "language": {
+                            "name": "java"
+                        }
+                    },
+                    "numeric_labels": {
+                        "thread_id": 147199
+                    },
+                    "data_stream.dataset": "apm",
+                    "host": {
+                        "hostname": "ivaapp06",
+                        "os": {
+                            "type": "linux",
+                            "platform": "linux",
+                            "full": "Linux 5.4.0-204-generic"
+                        },
+                        "name": "ivaapp06",
+                        "architecture": "amd64"
+                    },
+                    "client": {
+                        "ip": "127.0.0.1"
+                    },
+                    "http": {
+                        "request": {
+                            "method": "GET"
+                        },
+                        "response": {
+                            "status_code": 404
+                        },
+                        "version": "1.1"
+                    },
+                    "event": {
+                        "agent_id_status": "missing",
+                        "ingested": "2025-01-02T00:00:04Z",
+                        "outcome": "success"
+                    },
+                    "user_agent": {
+                        "original": "Elastic-Metricbeat/8.1.0 (linux; amd64; da4d9c00179e062b6d88c9dbe07d89b3d195d9d0; 2022-03-03 15:51:31 +0000 UTC)",
+                        "os": {
+                            "name": "Linux"
+                        },
+                        "name": "Other",
+                        "device": {
+                            "name": "Other"
+                        }
+                    },
+                    "transaction": {
+                        "result": "HTTP 4xx",
+                        "duration": {
+                            "us": 1659
+                        },
+                        "name": "GET",
+                        "id": "151554d973c7a0f5",
+                        "type": "request",
+                        "sampled": true
+                    },
+                    "timestamp": {
+                        "us": 1735776002004000
+                    }
+                },
+                "sort": [
+                    1735776002004
+                ]
+            },
+            {
+                "_index": ".ds-traces-apm-default-2025.01.01-001717",
+                "_id": "-gVPJJQBIfjCflSH6npi",
+                "_score": null,
+                "_source": {
+                    "parent": {
+                        "id": "151554d973c7a0f5"
+                    },
+                    "agent": {
+                        "name": "opentelemetry/java",
+                        "version": "1.23.1"
+                    },
+                    "data_stream.namespace": "default",
+                    "data_stream.type": "traces",
+                    "processor": {
+                        "name": "transaction",
+                        "event": "span"
+                    },
+                    "labels": {
+                        "process_runtime_description": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.291-b10",
+                        "thread_name": "application-akka.actor.default-dispatcher-144412",
+                        "telemetry_auto_version": "1.23.0"
+                    },
+                    "tags": [
+                        "_geoip_database_unavailable_GeoLite2-City.mmdb"
+                    ],
+                    "observer": {
+                        "hostname": "3293a7339d4a",
+                        "id": "d1ce9f4c-f562-4869-bfd2-78fa1e2c3db2",
+                        "ephemeral_id": "c934efaf-d6d7-4ecb-8259-41303070140b",
+                        "type": "apm-server",
+                        "version": "8.5.0"
+                    },
+                    "trace": {
+                        "id": "29227dba55c0824938de161685645ef8"
+                    },
+                    "@timestamp": "2025-01-02T00:00:02.004Z",
+                    "ecs": {
+                        "version": "1.12.0"
+                    },
+                    "service": {
+                        "environment": "hoa-lac",
+                        "name": "ivahome-hl-ivaapp06"
+                    },
+                    "numeric_labels": {
+                        "thread_id": 147199
+                    },
+                    "data_stream.dataset": "apm",
+                    "event": {
+                        "agent_id_status": "missing",
+                        "ingested": "2025-01-02T00:00:04Z",
+                        "outcome": "unknown"
+                    },
+                    "span": {
+                        "duration": {
+                            "us": 169
+                        },
+                        "subtype": "internal",
+                        "name": "play.request",
+                        "id": "4dc2f27f5e2310c2",
+                        "type": "app"
+                    },
+                    "timestamp": {
+                        "us": 1735776002004670
+                    }
+                },
+                "sort": [
+                    1735776002004
+                ]
+            },
+            {
+                "_index": ".ds-traces-apm-default-2025.01.01-001717",
+                "_id": "eQZTJJQBIfjCflSHeer3",
+                "_score": null,
+                "_source": {
+                    "container": {
+                        "id": "ecbb86bf140b0049858aea6d46d64d24a672c7cf571a3fe51cf3070380eaf441"
+                    },
+                    "process": {
+                        "pid": 1,
+                        "executable": "/usr/local/openjdk-8/jre/bin/java"
+                    },
+                    "agent": {
+                        "name": "opentelemetry/java",
+                        "version": "1.23.1"
+                    },
+                    "data_stream.namespace": "default",
+                    "source": {
+                        "port": 27017,
+                        "domain": "172.21.5.123"
+                    },
+                    "data_stream.type": "traces",
+                    "processor": {
+                        "name": "transaction",
+                        "event": "transaction"
+                    },
+                    "labels": {
+                        "process_runtime_description": "Oracle Corporation OpenJDK 64-Bit Server VM 25.342-b07",
+                        "db_connection_string": "mongodb://172.21.5.123:27017",
+                        "db_name": "ivacamdb",
+                        "thread_name": "pool-7-thread-1",
+                        "db_statement": "{\"update\": \"QRTZ_schedulers\", \"ordered\": \"?\", \"writeConcern\": {\"w\": \"?\", \"wtimeout\": \"?\", \"j\": \"?\"}, \"txnNumber\": \"?\", \"$db\": \"?\", \"$clusterTime\": {\"clusterTime\": \"?\", \"signature\": {\"hash\": \"?\", \"keyId\": \"?\"}}, \"lsid\": {\"id\": \"?\"}, \"updates\": [{\"q\": {\"schedulerName\": \"?\", \"instanceId\": \"?\"}, \"u\": {\"$set\": {\"lastCheckinTime\": \"?\", \"checkinInterval\": \"?\"}}, \"upsert\": \"?\"}]}",
+                        "db_operation": "update",
+                        "db_mongodb_collection": "QRTZ_schedulers",
+                        "db_system": "mongodb",
+                        "telemetry_auto_version": "1.23.0"
+                    },
+                    "tags": [
+                        "_geoip_database_unavailable_GeoLite2-City.mmdb"
+                    ],
+                    "observer": {
+                        "hostname": "3293a7339d4a",
+                        "id": "d1ce9f4c-f562-4869-bfd2-78fa1e2c3db2",
+                        "ephemeral_id": "c934efaf-d6d7-4ecb-8259-41303070140b",
+                        "type": "apm-server",
+                        "version": "8.5.0"
+                    },
+                    "trace": {
+                        "id": "48ad6f697c3242778ca0ce72596c0372"
+                    },
+                    "@timestamp": "2025-01-02T00:03:56.396Z",
+                    "ecs": {
+                        "version": "1.12.0"
+                    },
+                    "numeric_labels": {
+                        "thread_id": 151
+                    },
+                    "service": {
+                        "node": {
+                            "name": "ecbb86bf140b0049858aea6d46d64d24a672c7cf571a3fe51cf3070380eaf441"
+                        },
+                        "environment": "HOA-LAC-K8S",
+                        "framework": {
+                            "name": "io.opentelemetry.mongo-3.1",
+                            "version": "1.23.0-alpha"
+                        },
+                        "name": "ivaadmin-hoalac-ivaapp14",
+                        "runtime": {
+                            "name": "OpenJDK Runtime Environment",
+                            "version": "1.8.0_342-b07"
+                        },
+                        "language": {
+                            "name": "java"
+                        }
+                    },
+                    "data_stream.dataset": "apm",
+                    "host": {
+                        "hostname": "ivaapp14",
+                        "os": {
+                            "type": "linux",
+                            "platform": "linux",
+                            "full": "Linux 5.4.0-202-generic"
+                        },
+                        "name": "ivaapp14",
+                        "architecture": "amd64"
+                    },
+                    "client": {
+                        "port": 27017,
+                        "domain": "172.21.5.123"
+                    },
+                    "event": {
+                        "agent_id_status": "missing",
+                        "ingested": "2025-01-02T00:03:58Z",
+                        "outcome": "unknown"
+                    },
+                    "transaction": {
+                        "duration": {
+                            "us": 3175
+                        },
+                        "name": "update ivacamdb.QRTZ_schedulers",
+                        "id": "179580ab61bac33e",
+                        "type": "unknown",
+                        "sampled": true
+                    },
+                    "timestamp": {
+                        "us": 1735776236396000
+                    }
+                },
+                "sort": [
+                    1735776236396
+                ]
+            },
+            {
+                "_index": ".ds-traces-apm-default-2025.01.01-001717",
+                "_id": "9gZTJJQBIfjCflSHjPEA",
+                "_score": null,
+                "_source": {
+                    "agent": {
+                        "name": "otlp/go",
+                        "version": "unknown"
+                    },
+                    "data_stream.namespace": "default",
+                    "data_stream.type": "traces",
+                    "processor": {
+                        "name": "transaction",
+                        "event": "transaction"
+                    },
+                    "labels": {
+                        "process_runtime_description": "go version 1.22.0 linux/amd64",
+                        "network_protocol_version": "1.1",
+                        "url_full": "https://localhost:4318/v1/metrics",
+                        "http_request_method": "POST",
+                        "server_address": "localhost",
+                        "telemetry_auto_version": "v0.13.0-alpha",
+                        "url_path": "/v1/metrics"
+                    },
+                    "tags": [
+                        "_geoip_database_unavailable_GeoLite2-City.mmdb"
+                    ],
+                    "observer": {
+                        "hostname": "3293a7339d4a",
+                        "id": "d1ce9f4c-f562-4869-bfd2-78fa1e2c3db2",
+                        "ephemeral_id": "c934efaf-d6d7-4ecb-8259-41303070140b",
+                        "type": "apm-server",
+                        "version": "8.5.0"
+                    },
+                    "trace": {
+                        "id": "15d9f25ae9fdc5b66fc68392937fbd3e"
+                    },
+                    "@timestamp": "2025-01-02T00:03:59.125Z",
+                    "ecs": {
+                        "version": "1.12.0"
+                    },
+                    "service": {
+                        "environment": "HOA-LAC-K8S",
+                        "framework": {
+                            "name": "go.opentelemetry.io/auto/net/http",
+                            "version": "v0.13.0-alpha"
+                        },
+                        "name": "iot-vhomeadapter-auto-otel",
+                        "runtime": {
+                            "name": "go",
+                            "version": "1.22.0"
+                        },
+                        "language": {
+                            "name": "go"
+                        },
+                        "version": "0.1.0"
+                    },
+                    "numeric_labels": {
+                        "http_response_status_code": 0,
+                        "server_port": 4318
+                    },
+                    "data_stream.dataset": "apm",
+                    "event": {
+                        "agent_id_status": "missing",
+                        "ingested": "2025-01-02T00:04:02Z",
+                        "outcome": "unknown"
+                    },
+                    "transaction": {
+                        "duration": {
+                            "us": 824
+                        },
+                        "name": "POST",
+                        "id": "861579bf77e15263",
+                        "type": "unknown",
+                        "sampled": true
+                    },
+                    "timestamp": {
+                        "us": 1735776239125900
+                    }
+                },
+                "sort": [
+                    1735776239125
+                ]
+            },
+            {
+                "_index": ".ds-traces-apm-default-2025.01.01-001717",
+                "_id": "6AZTJJQBIfjCflSHkfKY",
+                "_score": null,
+                "_source": {
+                    "agent": {
+                        "name": "otlp/go",
+                        "version": "unknown"
+                    },
+                    "data_stream.namespace": "default",
+                    "data_stream.type": "traces",
+                    "processor": {
+                        "name": "transaction",
+                        "event": "transaction"
+                    },
+                    "labels": {
+                        "process_runtime_description": "go version 1.22.0 linux/amd64",
+                        "network_protocol_version": "1.1",
+                        "url_full": "http://localhost:8200/",
+                        "http_request_method": "GET",
+                        "server_address": "localhost",
+                        "telemetry_auto_version": "v0.13.0-alpha",
+                        "url_path": "/"
+                    },
+                    "tags": [
+                        "_geoip_database_unavailable_GeoLite2-City.mmdb"
+                    ],
+                    "observer": {
+                        "hostname": "3293a7339d4a",
+                        "id": "d1ce9f4c-f562-4869-bfd2-78fa1e2c3db2",
+                        "type": "apm-server",
+                        "ephemeral_id": "c934efaf-d6d7-4ecb-8259-41303070140b",
+                        "version": "8.5.0"
+                    },
+                    "trace": {
+                        "id": "1378e1a6bb55dee527466cfeeb4eb303"
+                    },
+                    "@timestamp": "2025-01-02T00:03:59.597Z",
+                    "ecs": {
+                        "version": "1.12.0"
+                    },
+                    "service": {
+                        "environment": "HOA-LAC-K8S",
+                        "framework": {
+                            "name": "go.opentelemetry.io/auto/net/http",
+                            "version": "v0.13.0-alpha"
+                        },
+                        "name": "iot-attributes-auto-otel",
+                        "runtime": {
+                            "name": "go",
+                            "version": "1.22.0"
+                        },
+                        "language": {
+                            "name": "go"
+                        },
+                        "version": "0.1.0"
+                    },
+                    "numeric_labels": {
+                        "http_response_status_code": 0,
+                        "server_port": 8200
+                    },
+                    "data_stream.dataset": "apm",
+                    "event": {
+                        "agent_id_status": "missing",
+                        "ingested": "2025-01-02T00:04:04Z",
+                        "outcome": "unknown"
+                    },
+                    "transaction": {
+                        "duration": {
+                            "us": 960
+                        },
+                        "name": "GET",
+                        "id": "698dd74d105b159c",
+                        "type": "unknown",
+                        "sampled": true
+                    },
+                    "timestamp": {
+                        "us": 1735776239597043
+                    }
+                },
+                "sort": [
+                    1735776239597
+                ]
+            },
+            {
+                "_index": ".ds-traces-apm-default-2025.01.01-001717",
+                "_id": "9AZTJJQBIfjCflSHjPEA",
+                "_score": null,
+                "_source": {
+                    "container": {
+                        "id": "d70e58a8446e2d03d92c9a1ec4b348c405fdfdafd48ebb4b587f203992f6f30b"
+                    },
+                    "agent": {
+                        "name": "opentelemetry/java",
+                        "version": "1.44.1"
+                    },
+                    "process": {
+                        "pid": 1,
+                        "executable": "/opt/java/openjdk/bin/java"
+                    },
+                    "data_stream.namespace": "default",
+                    "processor": {
+                        "name": "transaction",
+                        "event": "transaction"
+                    },
+                    "data_stream.type": "traces",
+                    "labels": {
+                        "network_protocol_version": "1.1",
+                        "http_route": "/actuator/health/**",
+                        "http_request_method": "GET",
+                        "server_address": "localhost",
+                        "url_scheme": "http",
+                        "network_peer_address": "0:0:0:0:0:0:0:1",
+                        "process_runtime_description": "Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.5+11-LTS",
+                        "thread_name": "http-nio-8062-exec-10",
+                        "user_agent_original": "curl/8.5.0",
+                        "client_address": "0:0:0:0:0:0:0:1",
+                        "telemetry_distro_name": "opentelemetry-java-instrumentation",
+                        "telemetry_distro_version": "2.10.0",
+                        "url_path": "/actuator/health/readiness"
+                    },
+                    "tags": [
+                        "_geoip_database_unavailable_GeoLite2-City.mmdb"
+                    ],
+                    "observer": {
+                        "hostname": "3293a7339d4a",
+                        "id": "d1ce9f4c-f562-4869-bfd2-78fa1e2c3db2",
+                        "type": "apm-server",
+                        "ephemeral_id": "c934efaf-d6d7-4ecb-8259-41303070140b",
+                        "version": "8.5.0"
+                    },
+                    "trace": {
+                        "id": "428f293d1fadf2abed81e6179267e9b8"
+                    },
+                    "@timestamp": "2025-01-02T00:03:59.842Z",
+                    "ecs": {
+                        "version": "1.12.0"
+                    },
+                    "numeric_labels": {
+                        "thread_id": 105,
+                        "http_response_status_code": 200,
+                        "server_port": 8062,
+                        "network_peer_port": 57272
+                    },
+                    "service": {
+                        "node": {
+                            "name": "d344d967-4409-476b-9923-20afa381a810"
+                        },
+                        "environment": "HOA-LAC-K8S",
+                        "framework": {
+                            "name": "io.opentelemetry.tomcat-10.0",
+                            "version": "2.10.0-alpha"
+                        },
+                        "name": "camIPC-mcs-device",
+                        "runtime": {
+                            "name": "OpenJDK Runtime Environment",
+                            "version": "21.0.5+11-LTS"
+                        },
+                        "language": {
+                            "name": "java"
+                        }
+                    },
+                    "data_stream.dataset": "apm",
+                    "host": {
+                        "hostname": "ivaapp08",
+                        "os": {
+                            "type": "linux",
+                            "platform": "linux",
+                            "full": "Linux 5.4.0-202-generic"
+                        },
+                        "name": "ivaapp08",
+                        "architecture": "amd64"
+                    },
+                    "event": {
+                        "agent_id_status": "missing",
+                        "ingested": "2025-01-02T00:04:02Z",
+                        "outcome": "unknown"
+                    },
+                    "transaction": {
+                        "duration": {
+                            "us": 916
+                        },
+                        "name": "GET /actuator/health/**",
+                        "id": "ed6037fdbd2a73b8",
+                        "type": "unknown",
+                        "sampled": true
+                    },
+                    "timestamp": {
+                        "us": 1735776239842807
+                    }
+                },
+                "sort": [
+                    1735776239842
+                ]
+            },
+            {
+                "_index": ".ds-traces-apm-default-2025.01.01-001717",
+                "_id": "9QZTJJQBIfjCflSHjPEA",
+                "_score": null,
+                "_source": {
+                    "container": {
+                        "id": "d70e58a8446e2d03d92c9a1ec4b348c405fdfdafd48ebb4b587f203992f6f30b"
+                    },
+                    "process": {
+                        "pid": 1,
+                        "executable": "/opt/java/openjdk/bin/java"
+                    },
+                    "agent": {
+                        "name": "opentelemetry/java",
+                        "version": "1.44.1"
+                    },
+                    "data_stream.namespace": "default",
+                    "data_stream.type": "traces",
+                    "processor": {
+                        "name": "transaction",
+                        "event": "transaction"
+                    },
+                    "labels": {
+                        "http_route": "/actuator/health/**",
+                        "network_protocol_version": "1.1",
+                        "http_request_method": "GET",
+                        "server_address": "localhost",
+                        "url_scheme": "http",
+                        "network_peer_address": "0:0:0:0:0:0:0:1",
+                        "process_runtime_description": "Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.5+11-LTS",
+                        "thread_name": "http-nio-8062-exec-8",
+                        "user_agent_original": "curl/8.5.0",
+                        "client_address": "0:0:0:0:0:0:0:1",
+                        "telemetry_distro_name": "opentelemetry-java-instrumentation",
+                        "telemetry_distro_version": "2.10.0",
+                        "url_path": "/actuator/health/readiness"
+                    },
+                    "tags": [
+                        "_geoip_database_unavailable_GeoLite2-City.mmdb"
+                    ],
+                    "observer": {
+                        "hostname": "3293a7339d4a",
+                        "id": "d1ce9f4c-f562-4869-bfd2-78fa1e2c3db2",
+                        "ephemeral_id": "c934efaf-d6d7-4ecb-8259-41303070140b",
+                        "type": "apm-server",
+                        "version": "8.5.0"
+                    },
+                    "trace": {
+                        "id": "18dc81df7e3660d6d2423e9799df0a95"
+                    },
+                    "@timestamp": "2025-01-02T00:03:59.855Z",
+                    "ecs": {
+                        "version": "1.12.0"
+                    },
+                    "numeric_labels": {
+                        "thread_id": 103,
+                        "http_response_status_code": 200,
+                        "server_port": 8062,
+                        "network_peer_port": 57278
+                    },
+                    "service": {
+                        "node": {
+                            "name": "d344d967-4409-476b-9923-20afa381a810"
+                        },
+                        "environment": "HOA-LAC-K8S",
+                        "framework": {
+                            "name": "io.opentelemetry.tomcat-10.0",
+                            "version": "2.10.0-alpha"
+                        },
+                        "name": "camIPC-mcs-device",
+                        "runtime": {
+                            "name": "OpenJDK Runtime Environment",
+                            "version": "21.0.5+11-LTS"
+                        },
+                        "language": {
+                            "name": "java"
+                        }
+                    },
+                    "data_stream.dataset": "apm",
+                    "host": {
+                        "hostname": "ivaapp08",
+                        "os": {
+                            "type": "linux",
+                            "platform": "linux",
+                            "full": "Linux 5.4.0-202-generic"
+                        },
+                        "name": "ivaapp08",
+                        "architecture": "amd64"
+                    },
+                    "event": {
+                        "agent_id_status": "missing",
+                        "ingested": "2025-01-02T00:04:02Z",
+                        "outcome": "unknown"
+                    },
+                    "transaction": {
+                        "duration": {
+                            "us": 1005
+                        },
+                        "name": "GET /actuator/health/**",
+                        "id": "e86d0bc442a9fca3",
+                        "type": "unknown",
+                        "sampled": true
+                    },
+                    "timestamp": {
+                        "us": 1735776239855880
+                    }
+                },
+                "sort": [
+                    1735776239855
+                ]
+            },
+            {
+                "_index": ".ds-traces-apm-default-2025.01.01-001717",
+                "_id": "9wZTJJQBIfjCflSHjPEA",
+                "_score": null,
+                "_source": {
+                    "container": {
+                        "id": "4046efd2326cc2aafc2018a553b583bb38f23a4bdc5f9ee306bc8e183528be3b"
+                    },
+                    "process": {
+                        "pid": 1,
+                        "executable": "/usr/local/openjdk-8/jre/bin/java"
+                    },
+                    "agent": {
+                        "name": "opentelemetry/java",
+                        "version": "1.23.1"
+                    },
+                    "data_stream.namespace": "default",
+                    "source": {
+                        "port": 27017,
+                        "domain": "172.21.5.123"
+                    },
+                    "data_stream.type": "traces",
+                    "processor": {
+                        "name": "transaction",
+                        "event": "transaction"
+                    },
+                    "labels": {
+                        "process_runtime_description": "Oracle Corporation OpenJDK 64-Bit Server VM 25.342-b07",
+                        "db_connection_string": "mongodb://172.21.5.123:27017",
+                        "db_name": "dummydb",
+                        "thread_name": "thread_common-scheduled {pool:common-scheduled, thread:11}",
+                        "db_statement": "{\"ping\": \"?\", \"$db\": \"?\", \"$clusterTime\": {\"clusterTime\": \"?\", \"signature\": {\"hash\": \"?\", \"keyId\": \"?\"}}, \"lsid\": {\"id\": \"?\"}}",
+                        "db_operation": "ping",
+                        "db_system": "mongodb",
+                        "telemetry_auto_version": "1.23.0"
+                    },
+                    "tags": [
+                        "_geoip_database_unavailable_GeoLite2-City.mmdb"
+                    ],
+                    "observer": {
+                        "hostname": "3293a7339d4a",
+                        "id": "d1ce9f4c-f562-4869-bfd2-78fa1e2c3db2",
+                        "type": "apm-server",
+                        "ephemeral_id": "c934efaf-d6d7-4ecb-8259-41303070140b",
+                        "version": "8.5.0"
+                    },
+                    "trace": {
+                        "id": "5e302d9f4952bdde69d77c5d6090f9c2"
+                    },
+                    "@timestamp": "2025-01-02T00:04:00.093Z",
+                    "ecs": {
+                        "version": "1.12.0"
+                    },
+                    "service": {
+                        "node": {
+                            "name": "4046efd2326cc2aafc2018a553b583bb38f23a4bdc5f9ee306bc8e183528be3b"
+                        },
+                        "environment": "HOA-LAC-K8S",
+                        "framework": {
+                            "name": "io.opentelemetry.mongo-3.1",
+                            "version": "1.23.0-alpha"
+                        },
+                        "name": "iva-cam-stream-hl-ivaapp14",
+                        "runtime": {
+                            "name": "OpenJDK Runtime Environment",
+                            "version": "1.8.0_342-b07"
+                        },
+                        "language": {
+                            "name": "java"
+                        }
+                    },
+                    "numeric_labels": {
+                        "thread_id": 159
+                    },
+                    "data_stream.dataset": "apm",
+                    "host": {
+                        "hostname": "ivaapp14",
+                        "os": {
+                            "type": "linux",
+                            "platform": "linux",
+                            "full": "Linux 5.4.0-202-generic"
+                        },
+                        "name": "ivaapp14",
+                        "architecture": "amd64"
+                    },
+                    "client": {
+                        "port": 27017,
+                        "domain": "172.21.5.123"
+                    },
+                    "event": {
+                        "agent_id_status": "missing",
+                        "ingested": "2025-01-02T00:04:02Z",
+                        "outcome": "unknown"
+                    },
+                    "transaction": {
+                        "duration": {
+                            "us": 583
+                        },
+                        "name": "ping dummydb",
+                        "id": "21b9d44251b5f87b",
+                        "type": "unknown",
+                        "sampled": true
+                    },
+                    "timestamp": {
+                        "us": 1735776240093000
+                    }
+                },
+                "sort": [
+                    1735776240093
+                ]
+            },
+            {
+                "_index": ".ds-traces-apm-default-2025.01.01-001717",
+                "_id": "-AZTJJQBIfjCflSHjPEA",
+                "_score": null,
+                "_source": {
+                    "agent": {
+                        "name": "opentelemetry/java",
+                        "version": "1.23.1"
+                    },
+                    "process": {
+                        "pid": 2360,
+                        "command_line": "/usr/lib/jvm/jdk1.8.0_291/jre/bin/java -Dappname=iva-cam-stream -Xms512m -Xmx6G -Dspring.profiles.active=pro-hl -Dlog4j.configurationFile=log4j2-pro-hl.properties -Dvertx.hazelcast.config=classpath:vertx-cluster-hl.xml -Dhazelcast.group.name=hazelcast-ivahl -Dhazelcast.group.password=IVAHL!@#$ -Dmongo.db.username=ivacamadmin -Dmongo.db.password=ViettelRD!@#$ -Dedge.gwAccessKey=8c53d26e986bda3ebbb79c545b6d7a05 -Dedge.gwSecretKey=897864dddc5f7b1c993c7941b0dec861 -Dedge.root.username=admin -Djava.util.concurrent.ForkJoinPool.common.parallelism=32 -Dserver.port.httprest=8001 -Dserver.port.rtsp=5081 -Dserver.port.edge=5071 -Dserver.port.devicecam=5101 -Dserver.port.control=5091 -Dserver.address=172.21.5.163 -Dudp.bootstrap.video.local.port.min=20000 -Dudp.bootstrap.video.local.port.max=45000 -Dudp.bootstrap.audio.local.port.min=20000 -Dudp.bootstrap.audio.local.port.max=45000 -Dserver.ext.address=116.101.122.181 -Dserver.ext.port.rtsp=5081 -Dstream.server.feature.webstream=false -javaagent:/app/iva-cam-stream/open",
+                        "executable": "/usr/lib/jvm/jdk1.8.0_291/jre/bin/java"
+                    },
+                    "data_stream.namespace": "default",
+                    "source": {
+                        "port": 27017,
+                        "domain": "192.168.20.154"
+                    },
+                    "processor": {
+                        "name": "transaction",
+                        "event": "transaction"
+                    },
+                    "data_stream.type": "traces",
+                    "labels": {
+                        "process_runtime_description": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.291-b10",
+                        "db_connection_string": "mongodb://192.168.20.154:27017",
+                        "db_name": "dummydb",
+                        "thread_name": "thread_common-scheduled {pool:common-scheduled, thread:93}",
+                        "db_statement": "{\"ping\": \"?\", \"$db\": \"?\", \"$clusterTime\": {\"clusterTime\": \"?\", \"signature\": {\"hash\": \"?\", \"keyId\": \"?\"}}, \"lsid\": {\"id\": \"?\"}}",
+                        "db_system": "mongodb",
+                        "db_operation": "ping",
+                        "telemetry_auto_version": "1.23.0"
+                    },
+                    "tags": [
+                        "_geoip_database_unavailable_GeoLite2-City.mmdb"
+                    ],
+                    "observer": {
+                        "hostname": "3293a7339d4a",
+                        "id": "d1ce9f4c-f562-4869-bfd2-78fa1e2c3db2",
+                        "type": "apm-server",
+                        "ephemeral_id": "c934efaf-d6d7-4ecb-8259-41303070140b",
+                        "version": "8.5.0"
+                    },
+                    "trace": {
+                        "id": "06a2576eb211aa18599a8bbd768e30f9"
+                    },
+                    "@timestamp": "2025-01-02T00:04:01.220Z",
+                    "ecs": {
+                        "version": "1.12.0"
+                    },
+                    "service": {
+                        "node": {
+                            "name": "ivaapp06"
+                        },
+                        "environment": "hoa-lac",
+                        "framework": {
+                            "name": "io.opentelemetry.mongo-3.1",
+                            "version": "1.23.0-alpha"
+                        },
+                        "name": "iva-cam-stream-hl-opentele-ivaapp06",
+                        "runtime": {
+                            "name": "Java(TM) SE Runtime Environment",
+                            "version": "1.8.0_291-b10"
+                        },
+                        "language": {
+                            "name": "java"
+                        }
+                    },
+                    "numeric_labels": {
+                        "thread_id": 347
+                    },
+                    "data_stream.dataset": "apm",
+                    "host": {
+                        "hostname": "ivaapp06",
+                        "os": {
+                            "type": "linux",
+                            "platform": "linux",
+                            "full": "Linux 5.4.0-204-generic"
+                        },
+                        "name": "ivaapp06",
+                        "architecture": "amd64"
+                    },
+                    "client": {
+                        "port": 27017,
+                        "domain": "192.168.20.154"
+                    },
+                    "event": {
+                        "agent_id_status": "missing",
+                        "ingested": "2025-01-02T00:04:02Z",
+                        "outcome": "unknown"
+                    },
+                    "transaction": {
+                        "duration": {
+                            "us": 505
+                        },
+                        "name": "ping dummydb",
+                        "id": "75f7f125c6093186",
+                        "type": "unknown",
+                        "sampled": true
+                    },
+                    "timestamp": {
+                        "us": 1735776241220000
+                    }
+                },
+                "sort": [
+                    1735776241220
+                ]
+            }
+        ]
+    }
+}
