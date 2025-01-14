@@ -9,11 +9,3 @@
 7,"[s1|connecting...] Protocol initialization request, step 1 (STARTUP {CQL_VERSION=3.0.0, DRIVER_NAME=Apache Cassandra Java Driver, DRIVER_VERSION=4.18.1, CLIENT_ID=22ab7ca8-ba37-4b95-89f3-d1e839d6577e, APPLICATION_NAME=IVA-Event}): failed to send request (java.nio.channels.NotYetConnectedException)",,,,,"[s1|connecting...] Protocol initialization request, step 1 (STARTUP {CQL_VERSION=3.0.0, DRIVER_NAME=Apache Cassandra Java Driver, DRIVER_VERSION=4.18.1, CLIENT_ID=22ab7ca8-ba37-4b95-89f3-d1e839d6577e, APPLICATION_NAME=IVA-Event}): failed to send request (java.nio.channels.NotYetConnectedException)"
 8,"[s0|connecting...] Protocol initialization request, step 1 (STARTUP {CQL_VERSION=3.0.0, DRIVER_NAME=Apache Cassandra Java Driver, DRIVER_VERSION=4.18.1, CLIENT_ID=3b069897-a316-4ff4-8744-9e2f1b2a0182, APPLICATION_NAME=IVA-Event}): failed to send request (java.nio.channels.NotYetConnectedException)",,,,,"[s0|connecting...] Protocol initialization request, step 1 (STARTUP {CQL_VERSION=3.0.0, DRIVER_NAME=Apache Cassandra Java Driver, DRIVER_VERSION=4.18.1, CLIENT_ID=3b069897-a316-4ff4-8744-9e2f1b2a0182, APPLICATION_NAME=IVA-Event}): failed to send request (java.nio.channels.NotYetConnectedException)"
 9,unexpected end of stream on https://open.camera.thingplus.vn/...,,,,,unexpected end of stream on https://open.camera.thingplus.vn/...
-
-
-
-
-
-
-
-
