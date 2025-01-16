@@ -22,9 +22,6 @@ for hit in data['hits']['hits']:
     record = { 
         'Timestamp': source.get('@timestamp', None),
         'Message': source.get('message', ''),
-        # 'WARN message': '',  # Assuming WARD message is not present in the provided structure
-        # 'Stack trace': '\n'.join([f"{item['classname']} - {item['filename']}:{item['line']['number']} - {item['function']}" for item in stacktrace]),
-        # 'Error code': error_info.get('type', ''),  # Assuming type as Error code
         'Error code': error_info.get('exception', [{}])[0].get('type', ''),  # Get first exception message as Error cause
         'Error cause': error_info.get('exception', [{}])[0].get('message', '')  # Get first exception message as Error cause
     }

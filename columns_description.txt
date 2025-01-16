@@ -1,0 +1,51 @@
+METRICS
+
+    Timestamp, thời gian nhận log
+    System CPU Usage, lượng CPU hệ thống sử dụng
+    Process CPU Usage, lượng CPU tiến trình sử dụng
+    System CPU Count, số nhân CPU hệ thống sử dụng
+
+    jvm_system_cpu_load_1m, X 
+    jvm_cpu_utilization, lượng CPU JVM sử dụng
+    jvm_system_cpu_utilization, lượng CPU hệ thống JVM sử dụng 
+    jvm.memory.committed, lượng RAM JVM được phân bổ
+    jvm.memory.max, lượng RAM JVM sử dụng tối đa
+    jvm.memory.used, lượng RAM JVM sử dụng
+    jvm.buffer.memory.used, lượng bộ nhớ đệm JVM sử dụng 
+    jvm.memory.usage.after.gc, X
+    jvm.gc.memory.allocated, X 
+    jvm.gc.memory.promoted, X 
+
+    process.runtime.jvm.memory.init, Bộ nhớ  JVM đã dùng khi khởi động tiến trình
+    process.runtime.jvm.memory.limit, Giới hạn Bộ nhớ JVM khi chạy tiến trình 
+    process.runtime.jvm.memory.usage, Bộ nhớ JVM đã dùng khi chạy tiến trình 
+    process.runtime.jvm.memory.committed, Bộ nhớ  JVM đã phân bổ khi chạy tiến trình 
+    process.runtime.jvm.memory.usage_after_last_gc, X 
+
+    system.memory.utilization, bộ nhớ hệ thống đã phân bổ
+    system.memory.usage, bộ nhớ hệ thống đã sử dụng
+    Latency, Độ trễ
+    Error Rate, Tỉ lệ lỗi
+    Number of Requests, số lần request
+
+logs
+    Timestamp, thời gian
+    Message, gói tin nhắn nhận được
+    Error code, mã lỗi
+    Error cause, nguyên nhân lỗi
+
+traces
+Timestamp, thời gian
+transaction_name, tên gói giao dịch
+transaction_duration, thời lượng gói giao dịch
+transaction_id, ID gói giao dịch
+transaction_type, loại gói giao dịch
+
+span_name, Tên Span
+span_duration, thời lượng Span
+span_subtype, X 
+span_id, ID của span 
+
+
+
+

@@ -17,12 +17,11 @@ extracted_data = []
 for hit in hits:
     source = hit['_source']
     transaction = source.get('transaction', {})
-    
     # Extracting relevant fields
     record = {
         # Timestamp
         'Timestamp': source.get('@timestamp', None),  # Adjust based on actual field names in your JSON
-        # CPU
+        
         'System CPU Usage': source.get('system.cpu.usage', None),  # Adjust based on actual field names in your JSON
         'Process CPU Usage': source.get('process.cpu.usage', None),  # Adjust based on actual field names in your JSON
         'System CPU Count': source.get('system.cpu.count', None),  # Adjust based on actual field names in your JSON
@@ -31,8 +30,7 @@ for hit in hits:
         'jvm_cpu_utilization': source.get('process.runtime.jvm.cpu.utilization', None),  # Adjust based on actual field names in your JSON
         'jvm_system_cpu_utilization': source.get('process.runtime.jvm.system.cpu.utilization', None),  # Adjust based on actual field names in your JSON
         
-        # Memory
-        
+        # Memory    
         'jvm.memory.committed': source.get('jvm.memory.committed', None),  # Adjust based on actual field names in your JSON
         'jvm.memory.max': source.get('jvm.memory.max', None),  # Adjust based on actual field names in your JSON
         'jvm.memory.used': source.get('jvm.memory.used', None),  # Adjust based on actual field names in your JSON
