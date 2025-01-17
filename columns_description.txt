@@ -1,5 +1,4 @@
 METRICS
-
     Timestamp, thời gian nhận log
     System CPU Usage, lượng CPU hệ thống sử dụng
     Process CPU Usage, lượng CPU tiến trình sử dụng
@@ -28,23 +27,23 @@ METRICS
     Error Rate, Tỉ lệ lỗi
     Number of Requests, số lần request
 
-logs
+LOGS
     Timestamp, thời gian
     Message, gói tin nhắn nhận được
     Error code, mã lỗi
     Error cause, nguyên nhân lỗi
 
-traces
-Timestamp, thời gian
-transaction_name, tên gói giao dịch
-transaction_duration, thời lượng gói giao dịch
-transaction_id, ID gói giao dịch
-transaction_type, loại gói giao dịch
+TRACES
+    Timestamp, thời gian
+    transaction_name, tên gói giao dịch
+    transaction_duration, thời lượng gói giao dịch
+    transaction_id, ID gói giao dịch
+    transaction_type, loại gói giao dịch
 
-span_name, Tên Span
-span_duration, thời lượng Span
-span_subtype, X 
-span_id, ID của span 
+    span_name, Tên Span
+    span_duration, thời lượng Span
+    span_subtype, X 
+    span_id, ID của span 
 
 
 
